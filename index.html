@@ -49,4 +49,9 @@
         <h3 class="aba-conteudo-titulo-principal">Atualizar meu curriculo com os certificados da Alura</h3>
         <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
         <div class="contador"></div>
-</div>
+    </div>
+    const contadores = document.querySelectorAll(".contador");
+    const tempoObjetivo1 = new Date("2023-10-05T00:00:00");
+    let tempoAtual = new Date();
+
+    contadores[0].textContent = tempoObjetivo1 - tempoAtual;
