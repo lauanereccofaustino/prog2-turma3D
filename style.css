@@ -1,78 +1,67 @@
-:root {
-    --cor-de-fundo: #1E1E1E;
-    --verde: #6FFF57;
-    --branco: #FFFFFF;
-    --botao-ativo: #3A375E;
-    --botao-inativo: rgba(58, 55, 94, 0.5);
-    --texto-fundo: rgba(58, 55, 94, 0.3);
+* {
+    margin: 0px;
+    padding: 0px;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #131212;
-    margin: 0;
+.corpo_site {
+    color: white;
+    background-color: black;
 }
 
-.conteudo-principal {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
+.cabeçalho {
+    text-align: center;
+}
+
+.cabeçalho_titulo {
+    font-size: 100px;
+}
+
+.cabeçalho_subtitulo {
+    font-size: 40px;
+}
+
+.introdução {
+    text-align: center;
+    text-align: justify;
+    padding: 15px;
+}
+
+.paragrafo-introdução {
+    font-size: 30px;
+}
+
+.foto_turma {
     width: 100%;
-    margin: 0 auto;
 }
 
-.titulo-principal {
-    text-align: left;
-    width: 100%;
-    font-size: 32px;
+.sessao_paginassecundarias {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
 }
 
-.titulo-principal span {
-    color: var(--verde);
+.lista_paginassecundarias {
+    display: inline-block;
+    font-size: 20px;
+    padding: 24px 142px;
 }
 
-.botao {
-    font-family: "Crakra Petch", sans-serif;
-    background-color: var(--botao-inativo);
-    color: var(--branco);
-    display: flex;
-    justify-content: center;
-    padding: 1em;
-    font-size: 18px;
-    align-items: center;
-    width: 100%;
-    border-bottom: 4px solid var(--botao-ativo);
-    border-left: 2px solid var(--botao-ativo);
-    border-right: 2px solid var(--botao-ativo);
-    border-top: none;
+.botao_paginassecundarias {
+    padding: 24px;
+    background-color: white;
+    color: black;
+}
 
-    .botoes {
-        display: block;
-    }
+.link_lista_paginassecundarias {
+    text-decoration: none;
+}
 
-    @media screen and (min-width: 768px) {
-        .botoes {
-            display: flex;
-        }
+.sessao_imagens_desempenho {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
 
-        .cronometro-container {
-            text-align: center;
-        }
+.div_imagem_desempenho {
+    text-align: center;
+}
 
-        #cronometro {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 3rem;
-            margin-top: 20px;
-        }
-
-        #cronometro div {
-            padding: 10px;
-        }
+.foto_desempenho {}
