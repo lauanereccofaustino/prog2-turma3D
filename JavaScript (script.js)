@@ -1,0 +1,36 @@
+// Data inicial para o cronômetro (100 dias a partir de agora)
+const dataInicial = new Date();
+dataInicial.setDate(dataInicial.getDate() + 100);
+
+// Função para atualizar o cronômetro
+function atualizarCronometro() {
+    const agora = new Date();
+    const diferenca = dataInicial - agora;
+
+    if (diferenca <= 0) {
+        clearInterval(cronometroInterval);
+        document.getElementById('cronometro').innerHTML = '<div>00</div><div>:</div><div>00</div><div>:</div><div>00</div><div>:</div><div>00</div>';
+        return;
+    }
+
+    const segundosTotais = Math.floor(diferenca / 1000);
+    const dias = Math.floor(segundosTotais / (3600 * 24));
+    const horas = Math.floor((segundosTotais % (3600 * 24)) / 3600);
+    const minutos = Math.floor((segundosTotais % 3600) / 60);
+    const segundos = segundosTotais % 60;
+
+    document.getElementById('dias').textContent = formatarNumero(dias);
+    document.getElementById('horas').textContent = formatarNumero(horas);
+    document.getElementById('minutos').textContent = formatarNumero(minutos);
+    document.getElementById('segundos').textContent = formatarNumero(segundos);
+}
+
+function formatarNumero(numero) {
+    return numero < 10 ? '0' + numero : numero;
+}
+
+// Atualiza o cronômetro a cada segundo
+const cronometroInterval = setInterval(atualizarCronometro, 1000);
+
+// Chama a função pela primeira vez para evitar atrasos iniciais
+atualizarCronometro();
