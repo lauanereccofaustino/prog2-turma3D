@@ -1,67 +1,16 @@
-* {
-    margin: 0px;
-    padding: 0px;
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
+
+:root {
+    --cor-de-fundo: #1E1E1E;
+    --verde: #6FFF57;
+    --branco: #FFFFFF;
+    --botao-ativo: #3A375E;
+    --botao-inativo: rgba(58, 55, 94, 0.5);
+    --texto-fundo: rgba(58, 55, 94, 0.3);
 }
 
-.corpo_site {
-    color: white;
-    background-color: black;
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco);
+    font-family: 'Chakra Petch', sans-serif;
 }
-
-.cabeçalho {
-    text-align: center;
-}
-
-.cabeçalho_titulo {
-    font-size: 100px;
-}
-
-.cabeçalho_subtitulo {
-    font-size: 40px;
-}
-
-.introdução {
-    text-align: center;
-    text-align: justify;
-    padding: 15px;
-}
-
-.paragrafo-introdução {
-    font-size: 30px;
-}
-
-.foto_turma {
-    width: 100%;
-}
-
-.sessao_paginassecundarias {
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-}
-
-.lista_paginassecundarias {
-    display: inline-block;
-    font-size: 20px;
-    padding: 24px 142px;
-}
-
-.botao_paginassecundarias {
-    padding: 24px;
-    background-color: white;
-    color: black;
-}
-
-.link_lista_paginassecundarias {
-    text-decoration: none;
-}
-
-.sessao_imagens_desempenho {
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-}
-
-.div_imagem_desempenho {
-    text-align: center;
-}
-
-.foto_desempenho {}
